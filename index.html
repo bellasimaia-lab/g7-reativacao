@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Reativação</title>
-</head>
+<script>
+  function carregarForm() {
+    const el = document.getElementById("g7-reativacao-de-contatos-115ce10473cca5b970f4");
 
-<body>
+    if (el && typeof RDStationForms !== "undefined") {
+      new RDStationForms(
+        "g7-reativacao-de-contatos-115ce10473cca5b970f4",
+        "UA-88184204-1"
+      ).createForm();
+    } else {
+      setTimeout(carregarForm, 200);
+    }
+  }
 
-  <h1>Reativação de contatos</h1>
-
-  <!-- NÃO MUDE ESSE ID -->
-  <div role="main" id="g7-reativacao-de-contatos-115ce10473cca5b970f4"></div>
-
-  <script src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-
-  <script>
-    new RDStationForms(
-      "g7-reativacao-de-contatos-115ce10473cca5b970f4",
-      "UA-88184204-1"
-    ).createForm();
-  </script>
-
-</body>
-</html>
+  carregarForm();
+</script>
